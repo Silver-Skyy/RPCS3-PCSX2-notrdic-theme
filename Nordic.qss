@@ -1,0 +1,795 @@
+QWidget {									/* kind of like our defaults */
+	background-color: #2e3440;			
+	color: #e5e9f0;						
+	alternate-background-color: #3b4252;	
+} 
+QMenuBar {									/* color for the Menu bar, the one with (file) (Emulation) and stuff  */
+	background: ; 			
+	color: #d8dee9;
+	border-bottom: none;			
+	spacing: 10px;				
+	margin: 1px;						
+	padding: 1px; 					
+	border: none;						
+}
+QMenuBar::item:selected {					/* This is for when you hover over the items in the menu */
+	border-bottom: 2px solid transparent; 		
+	border-radius: 4px;						
+	background: rgba(94,129,172,0.8);
+	margin-bottom: 0px;
+	padding-left: 6px;					
+	padding-right: 4px;
+}
+QMenuBar::item:!selected {					/* This is for items when you are not hovering over them, basically how they look by default like you can make all items have this under line with border-bottom: */
+	padding-top: 1px;
+	margin-bottom: 0px;
+	padding-left: 6px;					
+	padding-right: 4px;						
+	border-bottom: 2px solid transparent;
+}
+QMenuBar::item:pressed {					/* simply the style of the item when you press them */
+	color: #FFFFFF;						
+	background: #81a1c1;					
+	border-bottom: 2px solid transparent;		
+	border-radius: 4px;						
+	padding-left: 6px;
+	padding-right: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+QMenu {										/* the look of the submenus */
+    background-color: #333947;				
+    color: #e5e9f0;							/* color of the text */
+    border: 1px solid #5e81ac;				/* a simple border */
+    padding: 7px;							/* gives padding inside the menu */
+	margin: 5px;							/* this makes the menu not stick to the name, gives a feeling like it is hovering */
+	border-radius: 10px;					/* roundness of it */
+}
+QMenu::item {								/* basically the items in the submenus */
+	padding-left: 12px; 					/* this gives padding to different sides of the items */
+	padding-right: 12px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	margin-bottom: 0.125em;
+	border-left: 1px solid transparent;
+}
+QMenu::item:selected {						/* how the items look when you hover over them */
+	background: #5e81ac;
+	color: #e5e9f0;
+	border-left: 2px solid transparent;		
+	border-radius: 6px;
+}
+QMenu::item:disabled {						/* for items that are disabled in the submenu */
+	background-color: #2b303b;				/* background color of the disabled ones */
+	color: #81a1c1;							/* text color */
+	border-radius: 6px;
+}
+
+
+
+
+
+
+
+QMenu::indicator:unchecked {				/* enabled check boxes in the submenu not the settings */
+    margin-left: 5px;						/* this makes the check box not stick to the left side so much */
+    border: 0px solid #5e81ac;
+    background-color: #d8dee9;
+    width: 14px;							/* size of the it */
+    height: 14px;
+	border-radius: 3px;						/* roundness */
+}
+QMenu::indicator:checked {					/* disabled check boxes in the submenu, not the settings */
+    margin-left: 5px;
+    border: 0px solid #5e81ac;
+    background-color: #81a1c1;
+    width: 14px;
+    height: 14px;
+	border-radius: 3px;
+}
+
+
+
+
+
+
+QToolBar {									/* this is for the toolbar, the place with the (open) (refresh) and other ones*/
+	background: none;
+	border: 0px solid #FFFFFF;
+	border-radius: 8px;
+}
+QLabel#toolbar_icon_color {					/* with this you can change the color of the items in the toolbar */
+	color: #d8dee9;
+}
+QToolButton {								/* this takes care of the individual look of the items ( the text ) in the tool bar */
+	color: #d8dee9;							/* color of the text */
+	padding: 2px;							/* padding around the text */
+	border-bottom: 2px solid transparent;	
+	border-radius: 8px;
+}
+QToolButton:disabled {						/* it configures the properties of the disabled items but only the name, i couldn't find one for the disabled icon */
+	color: #81a1c1;
+}
+QToolButton:hover {
+	border-bottom: 2px solid transparent;	/* for when you hover over them */
+	background-color: #5e81ac;
+}
+QToolButton:pressed {						/* for when you press on the buttons */
+	background-color: #81a1c1;
+}	
+
+
+
+
+
+
+
+QLineEdit#mw_searchbar {					/* this changes how the search box looks like when you are not typing in it */
+	color: #d8dee9;							/* the color of the text inside the box when you are not typing mind you it WILL make the color darker, its hard coded i think */
+	background-color: #3b4252;				/* the color inside the box */
+	border: 1px solid #81a1c1;				/* color of the border of it */
+	margin: 13px;							/* this will make the box thinner but i can't find a way to change the width of it */
+	padding-left: 5px;
+	border-radius: 8px;						/* roundness of the box */
+}
+QLineEdit#mw_searchbar:hover {				/* this is for when you are hovering over the box */
+	color: #81a1c1;
+	background-color: #2d3038;
+	border: 1px solid #81a1c1;
+	margin: 13px;							/* keep it the same as the one above or when you hover on it it will change size abruptly */ 
+	padding-left: 5px;						/* keep it the same as the one above or when you hover on it it will change size abruptly */ 
+	border-radius: 8px;
+}
+QLineEdit#mw_searchbar:focus {				/* for when you tap and type in the box */
+	border: 1px solid #81a1c1;
+	border-radius: 8px;
+	color: #e5e9f0;							/* color of the text inside the box */
+	margin: 13px;
+}
+
+
+
+
+
+
+
+QToolBar#mw_toolbar QSlider {				/*you can change the default look of the BACKGROUND of the slider in the toolbar i say let it be transparent unless you want otherwise */
+	background-color: transparent;
+	color: #FFFFFF;
+	margin: 0px;
+}
+QWidget#sizeSliderContainer {				/*idk what this does*/
+	background: transparent;
+}
+QSlider#sizeSlider::groove:horizontal {		/* this is the horizontal line for the slider in the toolbar */
+    border: none;
+    height: 4px;  							/* you can make the line thicker or thinner with this */
+    background: #e5e9f0;					/* the color of the line*/
+    border-radius: 2px; 					/* this can not be more than half of the height number */ 
+	margin-bottom: 15px;					/* you can move it up with this, padding doesn't work */
+}
+QSlider#sizeSlider::handle:horizontal {		/*this is for the way the handle looks when you are not touching it */
+    width: 8px;								/* size of the handle 
+    height: 20px;
+    margin: -8px 0;                 		/* DO NOT TOUCH THIS it can break the handle */
+    border: 1px solid #161249;
+    border-radius: 4px;						/* roundness of it */
+    background: #e5e9f0;					/* color of it */
+}
+QSlider#sizeSlider::handle:hover {			/* this will change the way the handle looks when you hover over it */
+	border: 1px solid #5e81ac;
+}
+
+
+
+
+
+
+
+/*the border around the game when it is selected oh and IDK HOW THESE WORK */
+#game_list_grid_item[selected="true"] {
+	background: #81a1c1;
+	border-radius: 6px;
+}
+/*the border around the game when it is in focus */
+#game_list_grid_item:focus {
+	background: #5e81ac;
+	border-radius: 6px;
+}
+/* color of the text in default */
+#game_list_grid_item #game_list_grid_item_title_label {
+	color: #e5e9f0
+}
+/* color of the game background and text when it is selected */
+#game_list_grid_item[selected="true"] #game_list_grid_item_title_label {
+	background-color: #81a1c1;
+	color: #eceff4;
+}
+/* color of the text (name of the game) when you hover over the game icon */
+#game_list_grid_item[hover="true"] #game_list_grid_item_title_label {
+	color: #eceff4;
+}
+/* color of the game icon background and text when it is in focus */
+#game_list_grid_item[focus="true"] #game_list_grid_item_title_label {
+	background-color: #5e81ac;
+	color: #e5e9f0;
+}
+
+
+
+
+
+
+
+QScrollBar {								/* you can change how thin the scroll bar is, it changes the settings too */
+	width: 9px;								/* width of the scroll bar */
+	background: #4c566a;					/* the background of the slider not the handle */
+	border-radius: 0px;						/* it will give rounded corners to it, doesn't look good personally*/
+}
+QTableView QScrollBar {						/* i have no idea what this is */
+	width: 10px;
+	height: 3px;
+}
+QScrollBar::handle {						/* how the handle looks */
+	background: #5e81ac;					/* color of the handle */
+	min-height: 10px;						/* how small the handle can be */
+	border-radius: 4px						/* roundness of it */
+}
+QScrollBar::handle:hover {					/* color of the handle when you hover over it */
+	background: #81a1c1;
+}
+QScrollBar::handle:pressed {				/* color of the handle when you click on it */
+	background: #81a1c1;
+}	
+QScrollBar::handle:disabled {				/* color of the handle when it is disabled but i don't know how it can be disabled to test it */
+	background: #26293b;
+}
+
+
+
+
+
+
+
+QTableView QScrollBar::handle {				/* need to test it */
+	background: 
+}
+QScrollBar::up-arrow, QScrollBar::down-arrow, QScrollBar::up-button:vertical, QScrollBar::down-button, QScrollBar::sub-line, QScrollBar::add-line, QScrollBar::add-page, QScrollBar::sub-page {
+	color: transparent;
+	background: transparent;
+	border: none;
+}
+/* i need to check if the scrollbar is actually different in the grid view or not */
+#game_list_grid QScrollBar {
+	width: 10px;
+	background: #4c566a;		/* the background of the scroolbar not the handlr */
+	border-radius: 0px
+}
+#game_list_grid QScrollBar::handle {
+	background: #5e81ac;
+	min-height: 20px;
+	border-radius: 3px
+}
+#game_list_grid QScrollBar::handle:hover, QScrollBar::handle:pressed {
+	background: #809bbd;
+}
+/* i need to check if the scrollbar is actually different in the grid view or not */
+
+
+
+
+
+
+QHeaderView {
+	border: none;
+	border-bottom: 5px solid #2e3440;
+}
+QHeaderView::section {						/* these are for the banner when you use the list view, the one with version,category and the rest */
+	background-color: #5e81ac;
+	color: #f8f8f8;
+	padding-top: 4px;
+	padding-left: 3px;
+	height: 25px;
+	border: none;
+}
+QHeaderView::section:first {
+	padding-left: 0px;
+}
+
+QTableView::item:hover {
+	color: #81a1c1;
+}
+
+
+
+
+
+
+
+QSlider {									/* is is for the sliders in the settings page */
+	padding-top: 10px;
+}
+QSlider::groove:horizontal {				/* this is the horizontal line of the slider */
+	border-radius: 2;						/* make it a little rounded */
+	height: 4px;							/* the thickness of it can be controlled by it */
+	background: #81a1c1;					/* the color of the line */
+	margin: 1px;
+}
+QSlider::groove:horizontal:disabled {		/* this can change the color of the sliders that are disabled */
+	background: #4c566a;
+}
+QSlider::handle:horizontal {				/* the look of the handle in default */
+	background: #5e81ac;
+	border: 1px solid #2e3440;				/* a border for the handle */
+	border-radius: 4px;						/* roundness of the handle */
+	width: 15px;							/* you can control the shape and size of the button with these two */
+	height: 20px;
+	margin: -5px 2;							/* if you make the margins bigger then -5 it will shrink the handle into a line shape */
+}
+QSlider::handle:horizontal:hover {			/* the color and look of the handle when you hover over it */
+	background: #81a1c1;
+	border: 1px solid #2e3440;
+}
+QSlider::handle:horizontal:pressed {		/* the color and look of the handle when you press it */
+	border: 1px solid #2e3440;
+	background: #81a1c1;
+}
+
+
+
+
+
+
+QRadioButton::indicator {					/* the shapes and size of the radio buttons */
+	border: 1px solid #455971;				/* gives a border to the button */
+	width: 13px;							/* these two will indicate how big it will be */
+	height: 13px;
+	border-radius: 7px;						/* this needs to be around this number to keep the shape round */
+}
+QRadioButton::indicator:checked {			/*the color of the active ones */
+	background: #5e81ac;
+}
+QRadioButton::indicator:unchecked:hover {	/* the color of the box when you hover over it and it is not checked */
+	border: 1px solid #81a1c1;				/* a simple border */
+}
+QRadioButton::indicator:checked:hover {		/* the color of the box when you hover over it and it is checked */
+	border: 1px solid #81a1c1;				/* a simple border */
+}
+QRadioButton::indicator:unchecked {			/* the color of the unchecked ones */
+	background-color: #d8dee9;
+}
+QRadioButton::indicator:disabled {			/* the color of the disabled ones but i didn't see one that can be disabled so i don't know how it looks */
+	background-color: #455971;
+}
+
+
+
+
+
+
+QCheckBox::indicator {						/* the check boxes in the settings */
+	border: 1px solid #5e81ac;				/* a border for the check boxes */
+	border-radius: 2px;						/* rounds the corners */
+	width: 12px;							/* indicates how big the boxes are */
+	height: 12px;
+	margin-top: 0px;
+}
+QCheckBox::indicator:checked {				/* color of the box when it is checked */
+	background-color: #5e81ac;
+	border: 1px solid #5e81ac;				/* adds a border to the e box */
+}
+QCheckBox::indicator:unchecked:hover {		/* color of the box when you hover over it */
+	border: 1px solid #81a1c1;
+}
+QCheckBox::indicator:checked:hover {		/* color of the box when you hover over it and it is enabled */
+	background-color: #81a1c1;
+}
+QCheckBox::indicator:unchecked {			/* color of the box when it is unchecked */
+	background-color: #d8dee9;
+}
+QCheckBox::indicator:disabled {				/* color of the box when it is disabled */
+	background-color: #434c5e 
+}
+
+
+
+
+
+
+QGroupBox {									/* you know how the settings are grouped into those small boxes with text on top? this is for the lines */
+	margin-top: 1em;						/* do not change this one it breaks the placement of the text */
+	font-size: 9pt;							/* font size of the text */
+	border: 1px solid #d8dee9;
+	border-radius: 8px;						/* this makes the lines curve instead of a break */
+}
+QGroupBox::title {							/* and this one is for the text  */
+	subcontrol-origin: margin;				/* don't mess with these two */
+	subcontrol-position: top;
+	padding: 0.3em 0.5em 0.3em 0.5em;		/* this moves the text into where the line should be to make it look more uniform */
+	color: #e5e9f0;							/* color of the text */
+}
+
+
+
+
+
+
+QTabBar::tab {								/* the tabs in the settings */
+	color: #d8dee9;							/* color of the text of the tabs */
+	padding-left: 15px;						/* padding between the text */
+	padding-right: 15px;
+	padding-top: 10px;						
+	padding-bottom: 10px;					
+	border-top: 1px solid transparent;
+	border-radius: 8px;
+	min-width: 65px;
+	border-bottom: 1px solid transparent;
+}
+QTabWidget::pane {							/* this is for the big line around the setting */
+	border: none;
+}
+QTabWidget::tab-bar {						/* this makes the tabs stay in the middle rather than the left */
+	alignment: center;
+}
+QTabBar::tab:!selected {					/* look of the none selected ones */
+	color: #7895b9;							/* color of the text when they are not selected */ 
+	border-bottom: 1px solid transparent;
+}
+QTabBar::tab:selected {
+	color: #e5e9f0;							/* color of the text when they are selected */ 
+	border-bottom: 1px solid transparent;
+	background-color: #5e81ac;
+}
+QTabBar::tab:hover:!selected {				/* when something is not selected and you hover over it */
+	color: #e5e9f0;
+	border: 1px solid #81a1c1;
+}
+QTabBar#tab_bar_settings {					/* i cant find what these are at all  */
+	border-bottom: 10px solid #0074e7;
+	width: 5.20em;
+}
+QTabBar#tab_bar_settings::tab:!selected {
+	color: #FFFFFF;
+	border-bottom: 1px solid transparent;
+}
+
+QTabBar#tab_bar_settings::tab:selected {
+	color: #0074e7;
+	border-bottom: 1px solid transparent;
+}
+
+QTabBar#tab_bar_settings::tab:hover {
+	color: #177fe7;
+	border-bottom: 1px solid transparent;
+}
+
+
+
+
+
+
+
+
+QTabBar#tab_bar_log::tab {					/* you can change the log and TTY tabs if you delete this they will look like the tabs in settings */
+	width: 2.00em;
+	padding: 5;
+	font-size: 9.0pt;
+	font-weight: 400;
+	margin-bottom: 3px;
+}
+QTabWidget#tab_widget_log::tab-bar {		/* i like center you can change it to right or left too */
+	alignment: center;
+}
+QPlainTextEdit#log_frame {					/* color of the background of the log panel */
+	background-color: #111525;
+}
+QLabel#log_level_always {					/* this is the color of the normal text (info) */
+	color: #88c0d0;
+}
+QLabel#log_level_fatal {					/* fatal level error */
+	color: #bf616a;
+}
+QLabel#log_level_error {					/* errors */
+	color: #d08770;
+}
+QLabel#log_level_todo {						/* TODO aka unimplemented ones */
+	color: #ebcb8b;
+}
+QLabel#log_level_success {					/* successful operations */ 			
+	color: #a3be8c;
+}
+QLabel#log_level_warning {
+	color: #e49000;
+}
+QLabel#log_level_notice {
+	color: #FFFFFF;
+}
+QLabel#log_level_trace {
+	color: #00364a;
+}
+QLabel#log_stack {
+	color: #0071ec;
+}
+
+
+
+
+
+
+
+QComboBox {									/* the drawer style boxes */	
+	background-color: #5e81ac;				/* color of the inside of the box */
+	color: #e5e9f0;							/* text color */
+	border: 0px solid #455971;		
+	border-radius: 4px;						/* roundness */
+	padding-bottom: 2px;					/* makes the text not be so close to the bottom */
+	padding-left: 10px;						/* makes the text not be so close to the left side */
+	min-height: 20px;						/* how tick the boxes can be */
+}
+QComboBox:hover {							/* when you hover over them */
+	color: #e5e9f0;
+	background-color: #81a1c1;
+	border: 0 solid #0074e7;
+	border-radius: 4px;
+	padding-bottom: 2px;
+	padding-left: 10px;
+}
+QComboBox::drop-down {
+	border: 0px silid transparent;
+}
+QComboBox::down-arrow {
+    image: url(GuiConfigs/list_arrow_down_white.png);
+	height: 25px;
+	width: 25px
+}
+QComboBox::item:selected {					/* when you click on them */
+	color: #FFFFFF;
+	background-color: #1c273d;
+	border: 0.0625em solid #0074e7;
+	border-radius: 0.10em;
+	border: none;
+	padding: 5px;
+}
+QComboBox::item:!selected {					/* i have no idea about these ones, they dont seem to change anything from what i see */
+	color: #FFFFFF;
+	background-color: #111525;
+	border: 0.0625em solid #0074e7;
+	border-radius: 0.10em;
+	border: none;
+	padding: 5px;
+	height: 15px;
+}
+QComboBox::indicator{
+	background-color: transparent;
+	selection-background-color: transparent;
+	color: transparent;
+	selection-color: transparent;
+}
+QComboBox::selected {
+	background-color: #81a1c1;
+	color: #e5e9f0;
+	border: 0px solid #0074e7;
+	border-radius: 4px;
+	padding-bottom: 2px;
+}
+QComboBox:disabled {						/* for the disabled ones */		
+	background-color: #434c5e;
+	color: #e5e9f0;
+}
+QComboBox QAbstractItemView {
+    background-color: #3b4252;                                        
+    color: #e5e9f0;                                         
+	padding: 3px;
+	padding-left: 2px;
+	border: none;							
+    outline: none;
+}
+QComboBox QAbstractItemView::item {
+	background-color #81a1c1;
+    min-height: 25px;                 
+    padding-left: 10px; 
+	padding-top: 3px;
+}
+QComboBox QAbstractItemView::item:hover,
+QComboBox QAbstractItemView::item:focus {
+    background-color: #81a1c1;
+    outline: none;
+    border: none;
+	border-radius: 6px;
+	padding-top: 3px;
+	padding-left: 10px; 
+}
+
+
+
+
+QPushButton {								/* buttons like save cancel and apply you see in the settings */
+	border: 0px solid #455971;
+	padding: 6px;
+	color: #e5e9f0;
+	border-radius: 6px;
+	background-color: #5e81ac;
+	min-width: 82px;
+}
+QPushButton:hover {
+	background-color: #81a1c1;
+	border: 0px solid #0074e7;
+	padding: 6px;
+	color: #e5e9f0;
+}
+QPushButton::pressed {
+	background-color: #88c0d0;
+}
+QPushButton:disabled {
+	background-color: #434c5e;
+	color: #e5e9f0;
+}
+
+
+
+
+
+
+QSpinBox, QDoubleSpinBox {					/* there are these boxes in settings/Emulation called Width and Height. its for boxes like them */
+	border: 0px solid #455971;
+	padding: 5px;
+	color: #e5e9f0;
+	border-radius: 5px;
+	background-color: #5e81ac;
+}
+QSpinBox:hover, QDoubleSpinBox:hover {
+	background-color: #81a1c1;
+	border: 0px solid #0074e7;
+	padding: 5px;
+	color: #e5e9f0;
+}
+QSpinBox:disabled, QDoubleSpinBox:disabled {
+	color: #e5e9f0;
+	background: #434c5e;
+	border: 0px solid #455971;
+}
+QSpinBox::up-button {
+	image: url(GuiConfigs/list_arrow_up_white.png);
+	height: 15px;
+	width: 15px;
+}
+QSpinBox::down-button {
+	image: url(GuiConfigs/list_arrow_down_white.png);
+	height: 15px;
+	width: 15px;
+	marging: 2px;
+}
+QSpinBox::up-button:hover {
+    background-color: #5e81ac; 
+}
+QSpinBox::down-button:hover {
+    background-color: #5e81ac
+}
+
+
+
+QLineEdit {										/* the text box for typing in TTY */
+    padding: 4px 8px;
+    font-size: 12px;
+    border: 1px solid #5e81ac;
+    border-radius: 8px;  
+    min-width: 200px;  
+    max-width: 340px; 
+	min-height: 21px
+}
+QLineEdit:focus {
+	background-color: #3b4252;
+	color: #e5e9f0;
+}
+
+
+
+
+
+
+
+
+QCalendarWidget QWidget {
+    background-color: #3b4252;
+    color: #e5e9f0;
+    selection-background-color: #5e81ac;
+    font-size: 10pt;
+}
+
+
+
+
+
+
+
+QListWidget {
+	border: 1px solid #d8dee9;
+	border-radius: 5px
+}
+QListWidget:disabled {
+	border: 1px solid #455971;
+}
+QListWidget::item:selected {
+	background-color: #81a1c1;
+	color: #e5e9f0;
+	border-radius: 2px;
+}
+QListWidget::item:hover {
+	background-color: #81a1c1;
+	border-radius: 2px;
+}
+QListWidget:disabled, QListWidget:disabled:hover, QListWidget::item:disabled:hover {
+	background-color: #111525;
+	color: #FFFFFF;
+	border-radius: 0.25em;
+}
+QListWidget::indicator {
+	border: 1px solid #d8dee9;
+	background: #d8dee9;
+	padding: 5px;
+	border-radius: 3px;
+}
+QListWidget::indicator:checked {
+	background: #5e81ac;
+}
+QListWidget::indicator:disabled {
+	background: transparent;
+	border: 1px solid #1b1e23;
+}
+
+
+
+
+
+
+QLabel#gamelist_icon_background_color {
+	color: transparent;
+}
+
+
+
+
+QLabel#l_controller {
+	color: #5e81ac;
+}
+
+
+
+QToolTip {
+    background-color: #434c5e;  
+    color: white;
+    border: 1px solid transparent;        
+    padding: 5px;
+}
+
+
+
+
+QProgressBar {
+	border: 1px solid #455971;
+	border-radius: 5px;
+	text-align: center;
+}
+
+QProgressBar::chunk {
+	background-color: #5e81ac
+}
+
+
+QDockWidget::title#logger {
+	background: #111525;
+}
+
+
+/* Set Windows Taskbar Thumbnail colors */
+QLabel#thumbnail_icon_color {
+	color: #23262d;
+}
